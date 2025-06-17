@@ -1,0 +1,106 @@
+/* Black Olive : #30362F 
+Brown = #625834
+Satin Gold = #A59132
+Creme = #FFFBDB
+Orange = #DA7422
+*/
+
+body {
+  background-color: #fffbdb;
+  font-family: "Segoe UI", sans-serif;
+  color: #30362f;
+  height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border: 2px solid #625834;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(48, 54, 47, 0.1);
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #da7422;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #625834;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #a59132;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fffbdb;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border: 3px solid #625834;
+  box-shadow: 0 0 8px rgba(98, 88, 52, 0.4);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #da7422;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #a59132;
+}
+
+p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+a {
+  color: #da7422;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  background-color: #fff3f0;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: #da7422;
+  list-style: none;
+  font-weight: 600;
+}
+
+p {
+  font-size: small;
+  margin: 50px auto;
+}
