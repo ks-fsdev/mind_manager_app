@@ -136,6 +136,13 @@ a {
   box-sizing: border-box;
 }
 
+.view-link {
+  display: inline-block;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #30362f;
+}
+
 /* Blog Form */
 .blog-form {
   display: flex;

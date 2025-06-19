@@ -1,0 +1,120 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fffbdb;
+  margin: 0;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #30362f;
+}
+
+a:-webkit-any-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #da7422;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+a:-webkit-any-link:hover {
+  text-decoration: underline;
+}
+
+.entry {
+  background: white;
+  border: 2px dashed #625834;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.entry-date {
+  color: #a59132;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.entry p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #30362f;
+  word-wrap: break-word;
+}
+
+.blog-section {
+  border: 2px dashed #625834;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fffbdb;
+  border-radius: 10px;
+}
+
+.blog-form input,
+.blog-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #625834;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.blog-form button {
+  background-color: #da7422;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.blog-entry {
+  border-top: 1px dashed #a59132;
+  padding-top: 12px;
+  margin-top: 15px;
+}
+
+.blog-entry h4 {
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+  color: #30362f;
+}
+
+.blog-entry p {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .entry {
+    padding: 0.9rem;
+  }
+
+  .entry-date {
+    font-size: 0.9rem;
+  }
+
+  .entry p {
+    font-size: 0.95rem;
+  }
+}

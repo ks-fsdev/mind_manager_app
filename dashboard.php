@@ -47,6 +47,39 @@ $result = $stmt->get_result();
 $todos = $result->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
 
+//diary
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_diary"])) {
+    $entry = trim($_POST["diary_entry"]);
+    $userId = $_SESSION["user_id"];
+
+    if (!empty($entry)) {
+        $stmt = $conn->prepare("INSERT INTO diaries (user_id, entry_date, content, created_at) VALUES (?, CURDATE(), ?, NOW())");
+        $stmt->bind_param("is", $userId, $entry);
+        $stmt->execute();
+        $stmt->close();
+    }
+}
+
+// Blog Post
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["publish_blog"])) {
+    $title = trim($_POST["blog_title"]);
+    $content = trim($_POST["blog_content"]);
+
+    if (!empty($title) && !empty($content)) {
+        $stmt = $conn->prepare("INSERT INTO blogs (user_id, title, content, published_at) VALUES (?, ?, ?, NOW())");
+        $stmt->bind_param("iss", $userId, $title, $content);
+        $stmt->execute();
+        $stmt->close();
+    }
+}
+
+// Fetch blogs
+$stmt = $conn->prepare("SELECT title, content, published_at FROM blogs WHERE user_id = ? ORDER BY published_at DESC");
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+$result = $stmt->get_result();
+$blogs = $result->fetch_all(MYSQLI_ASSOC);
+$stmt->close();
 
 ?>
 
@@ -104,25 +137,44 @@ $stmt->close();
     </section>
 
     <!-- Diary Section -->
-    <section class="diary-section">
-      <h2>📔 Diary</h2>
-      <textarea placeholder="What's on your mind today?" class="diary-input"></textarea>
-    </section>
+   <section class="diary-section">
+  <h2>📔 Diary</h2>
+
+  <form method="POST" action="">
+    <textarea name="diary_entry" placeholder="What's on your mind today?" class="diary-input" required></textarea>
+    <br>
+    <button type="submit" name="add_diary" class="btn-diary">Add Entry</button>
+    <a href="diary/index.php" class="view-link">📚 View All Entries</a>
+  </form>
+</section>
+
 
     <!-- Blog Section -->
     <section class="blog-section">
-      <h2>✍️ Write a Blog</h2>
-      <form class="blog-form">
-        <input type="text" placeholder="Blog Title" class="blog-title" />
-        <textarea placeholder="Your blog content..." class="blog-content"></textarea>
-        <button type="submit">Publish</button>
-      </form>
+  <h2>✍️ Write a Blog</h2>
 
-      <div class="blog-feed">
-        <h3>Recommended Blogs</h3>
-        <!-- Blog entries will go here -->
-      </div>
-    </section>
+  <form class="blog-form" method="POST" action="">
+    <input type="text" name="blog_title" placeholder="Blog Title" class="blog-title" required />
+    <textarea name="blog_content" placeholder="Your blog content..." class="blog-content" required></textarea>
+    <button type="submit" name="publish_blog">Publish</button>
+  </form>
+
+  <div class="blog-feed">
+    <h3>📰 Your Recent Blogs</h3>
+    <?php if (empty($blogs)): ?>
+      <p>You haven’t written anything yet.</p>
+    <?php else: ?>
+      <?php foreach ($blogs as $blog): ?>
+        <div class="blog-entry">
+          <h4><?= htmlspecialchars($blog["title"]) ?></h4>
+          <small>🗓️ <?= htmlspecialchars($blog["published_at"]) ?></small>
+          <p><?= nl2br(htmlspecialchars($blog["content"])) ?></p>
+        </div>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+</section>
+
 
   </main>
 
