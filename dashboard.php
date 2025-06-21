@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["publish_blog"])) {
 }
 
 // Fetch blogs
-$stmt = $conn->prepare("SELECT title, content, published_at FROM blogs WHERE user_id = ? ORDER BY published_at DESC");
+$stmt = $conn->prepare("SELECT id, title, content, published_at FROM blogs WHERE user_id = ? ORDER BY published_at DESC");
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -169,9 +169,12 @@ $stmt->close();
           <h4><?= htmlspecialchars($blog["title"]) ?></h4>
           <small>🗓️ <?= htmlspecialchars($blog["published_at"]) ?></small>
           <p><?= nl2br(htmlspecialchars($blog["content"])) ?></p>
-        </div>
+          <a href="blogs/view-blog.php?id=<?= $blog["id"] ?>" class="blog-view-btn">🔍 View Full Blog</a>
+
+        </div>        
       <?php endforeach; ?>
     <?php endif; ?>
+
   </div>
 </section>
 

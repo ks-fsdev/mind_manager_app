@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+  background: #fffbdb;
+  color: #30362f;
+  padding: 20px;
+}
+.blog-box {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border: 2px dashed #625834;
+  padding: 20px;
+  border-radius: 10px;
+}
+h2 {
+  color: #a59132;
+}
+.actions {
+  margin-top: 20px;
+}
+.actions a,
+.actions button,
+.modal-content button {
+  padding: 8px 14px;
+  margin-right: 10px;
+  background-color: #da7422;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.back-link {
+  display: block;
+  margin-bottom: 15px;
+  color: #625834;
+}
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border: 2px solid #625834;
+  border-radius: 10px;
+  text-align: center;
+}
