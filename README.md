@@ -1,4 +1,4 @@
-<h1>🧠 Mind Manager App — Productivity Dashboard</h1>
+<h1>🧠 Mind Manager App — Productivity Mobile App</h1>
 
 <p>
   A modular web-based productivity app built using <strong>PHP</strong> as the core backend language with integrated <strong>HTML</strong> for structure and templating, and <strong>MySQL</strong> for database management. It also uses <strong>CSS</strong> and <strong>JavaScript</strong> for styling and interaction. The project also features <strong>user authentication</strong> including login and signup functionality. This app lets users write daily diary entries, maintain blogs, and potentially track to-dos or thoughts—all under one interface.
@@ -6,7 +6,7 @@
 
 <hr />
 
-<h2>⚙️ Feature Highlights + Screenshots</h2>
+<h2>⚙️ Feature Highlights</h2>
 
 <ul>
   <li><strong>🔐 Auth:</strong> Basic login/signup structure using PHP<br />
