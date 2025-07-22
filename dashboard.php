@@ -97,8 +97,7 @@ $stmt->close();
   <header class="dashboard-header">
   <div class="account-menu">
     <button class="account-button">
-      👤 <?= htmlspecialchars($_SESSION["username"] ?? "Account") ?> ▼
-    </button>
+      👤 <?= htmlspecialchars($_SESSION["username"] ?? "Account") ?></button>
     <!-- dropdown menu (optional later) -->
   </div>
   <div class="dashboard-title">🧠 Mind Manager</div>
