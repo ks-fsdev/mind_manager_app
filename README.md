@@ -11,25 +11,25 @@
 <ul>
   <li><strong>🔐 Auth:</strong> Basic login/signup structure using PHP<br />
     <p><strong>Login Page</strong></p>
-    <img src="ss/login.png" alt="Login Page" width="500" />
+    <img src="README-ss/login.png" alt="Login Page" width="500" />
   </li>
   <li><strong>📂 Entry Overview:</strong> View all previous diary entries in one click from the dashboard</li>
   <li><strong>📰 Blog Preview:</strong> Dashboard shows your latest blogs with an option to view full blog<br />
     <p><strong>Dashboard View</strong></p>
-    <img src="ss/dashboard.gif" alt="Dashboard View" width="500" />
+    <img src="README-ss/dashboard.gif" alt="Dashboard View" width="500" />
   </li>
   <li><strong>🧾 To-Do List:</strong> Add tasks, tick them when done, and delete them later<br />
     <p><strong>Task Manager</strong></p>
-    <img src="ss/taskmanager.gif" alt="Task Manager" width="500" />
+    <img src="README-ss/taskmanager.gif" alt="Task Manager" width="500" />
   </li>
   <li><strong>📝 Diary:</strong> Write & save personal notes or journal entries<br />
     <p><strong>Diary Section</strong></p>
-    <img src="ss/diary.gif" alt="Diary Section" width="500" />
+    <img src="README-ss/diary.gif" alt="Diary Section" width="500" />
   </li>
   <li><strong>📚 Blog:</strong> Add, display, and manage blogs</li>
   <li><strong>✏️ Blog Editor:</strong> From the full blog view, you can also edit or delete your post<br />
     <p><strong>Blog Preview and Edit</strong></p>
-    <img src="ss/blog.gif" alt="Blog Section" width="500" />
+    <img src="README-ss/blog.gif" alt="Blog Section" width="500" />
   </li>
 </ul>
 
